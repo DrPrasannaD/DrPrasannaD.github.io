@@ -56,10 +56,6 @@
       margin-bottom: 25px;
     }
 
-    h3 {
-      margin-bottom: 5px;
-    }
-
     ul {
       padding-left: 20px;
     }
@@ -76,48 +72,71 @@
       margin-bottom: 25px;
     }
 
-    /* TIMELINE */
-    .timeline {
-      position: relative;
-      margin-left: 20px;
-      padding-left: 30px;
+    /* VISUAL TIMELINE */
+    .visual-timeline {
+      display: grid;
+      gap: 30px;
     }
 
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: #2563eb;
-      border-radius: 4px;
+    .timeline-card {
+      display: grid;
+      grid-template-columns: 60px auto;
+      gap: 20px;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      align-items: center;
     }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 40px;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -2px;
-      top: 8px;
-      width: 16px;
-      height: 16px;
-      background: #2563eb;
+    .timeline-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 50%;
     }
 
-    .timeline-content {
+    /* CERTIFICATION BADGES */
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .badge {
       background: white;
-      padding: 20px;
-      border-radius: 12px;
+      border-radius: 16px;
+      padding: 25px 15px;
+      text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
 
-    .timeline-content span {
-      font-size: 14px;
+    .badge-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge h4 {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .badge span {
+      font-size: 13px;
       color: #475569;
     }
 
@@ -131,10 +150,6 @@
       color: #2563eb;
       text-decoration: none;
       font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -154,163 +169,46 @@
     <h1>Dr. Prasanna Kumar Reddy</h1>
     <p class="subtitle">Emergency Physician · Clinical Research · Health Informatics</p>
     <p class="summary">
-      Clinically trained physician with hands-on experience supporting clinical research
-      operations, patient safety initiatives, and healthcare data analytics.
-      Experienced in patient screening, informed consent, source documentation,
-      EHR review, and compliance with ICH-GCP, HIPAA, and IRB workflows.
-      Actively seeking Clinical Research Coordinator (CRC) and research-focused healthcare roles.
+      Clinically trained physician with hands-on experience supporting clinical research,
+      patient safety initiatives, and healthcare data analytics.
+      Actively seeking Clinical Research Coordinator (CRC) roles.
     </p>
   </div>
-
-  <!-- WHY ME -->
-  <section>
-    <h2>Why I Add Value to Clinical Research Teams</h2>
-    <div class="card">
-      <ul>
-        <li>Physician-level clinical judgment with CRC-level execution</li>
-        <li>Hands-on experience with patient screening, informed consent, and visit coordination</li>
-        <li>Strong grounding in ICH-GCP, FDA CFR Title 21, HIPAA, and research ethics</li>
-        <li>Ability to bridge clinicians, coordinators, and data teams</li>
-        <li>Strong focus on participant safety and data integrity</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Clinical & Research Experience</h2>
-
-    <div class="card">
-      <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
-      <span>Hyderabad, India · Jun 2022 – Jun 2024</span>
-      <ul>
-        <li>Supported clinical research and quality-improvement initiatives through chart abstraction and source document review</li>
-        <li>Conducted patient screening, eligibility verification, and informed consent discussions</li>
-        <li>Performed protocol-driven assessments and ensured audit-ready EHR documentation</li>
-        <li>Executed phlebotomy and specimen collection following GCP standards</li>
-        <li>Collaborated with investigators to maintain ICH-GCP and HIPAA compliance</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
-      <span>Hyderabad, India · Feb 2021 – Mar 2022</span>
-      <ul>
-        <li>Supported hospital-based research through chart reviews and documentation quality checks</li>
-        <li>Assisted with patient recruitment and eligibility verification for observational studies</li>
-        <li>Maintained source documents and EHR records to ensure audit readiness</li>
-        <li>Performed phlebotomy and specimen handling aligned with GCP standards</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Clinical Intern – Bicol Medical Center</h3>
-      <span>Philippines · Dec 2019 – May 2020</span>
-      <ul>
-        <li>Conducted patient assessments and clinical documentation under physician supervision</li>
-        <li>Supported academic research through chart abstraction and outcome documentation</li>
-        <li>Performed phlebotomy and specimen collection</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital</h3>
-      <span>Philippines · Jun 2019 – Dec 2019</span>
-      <ul>
-        <li>Participated in bedside data collection and chart reviews for academic research</li>
-        <li>Supported community health documentation and patient education</li>
-        <li>Worked within multidisciplinary teaching hospital teams</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section>
-    <h2>Professional Experience Timeline</h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
-          <span>India · 2022 – 2024</span>
-          <p>Clinical research support, informed consent, EHR documentation, and protocol adherence.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
-          <span>India · 2021 – 2022</span>
-          <p>Hospital-based research support, patient recruitment, and specimen handling.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Clinical Intern – Teaching Hospitals</h3>
-          <span>Philippines · 2019 – 2020</span>
-          <p>Clinical care, academic research assistance, and documentation.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Selected Academic & Research Projects</h2>
-    <div class="card">
-      <h3>Clinical Decision Support Systems (CDSS) & Medication Safety</h3>
-      <ul>
-        <li>Reviewed 24 peer-reviewed studies using PRISMA methodology</li>
-        <li>Identified 30–50% reductions in medication errors with CDSS use</li>
-        <li>Analyzed alert fatigue, workflow integration, and clinician trust</li>
-        <li>Evaluated ethical, regulatory, and data governance considerations</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Core Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Clinical Research Coordination (CRC)</li>
-        <li>Informed Consent & Source Documentation</li>
-        <li>Patient Recruitment & Visit Coordination</li>
-        <li>EHR / EMR Review</li>
-        <li>Phlebotomy & Specimen Handling</li>
-        <li>REDCap & EDC Familiarity</li>
-        <li>SQL, R, Python (academic use)</li>
-      </ul>
-    </div>
-  </section>
 
   <!-- CERTIFICATIONS -->
   <section>
     <h2>Certifications & Compliance Training</h2>
-    <div class="card">
-      <ul>
-        <li>CITI – Good Clinical Practice (ICH E6, FDA Focus)</li>
-        <li>CITI – Responsible Conduct of Research (RCR)</li>
-        <li>CITI – Information Privacy & Security (IPS)</li>
-        <li>CITI – Conflicts of Interest (COI)</li>
-        <li>BLS – Healthcare Provider</li>
-      </ul>
+
+    <div class="badge-grid">
+      <div class="badge">
+        <div class="badge-icon">✔</div>
+        <h4>Good Clinical Practice</h4>
+        <span>ICH E6 · FDA Focus</span>
+      </div>
+
+      <div class="badge">
+        <div class="badge-icon">🧬</div>
+        <h4>Responsible Conduct of Research</h4>
+        <span>CITI RCR</span>
+      </div>
+
+      <div class="badge">
+        <div class="badge-icon">🔐</div>
+        <h4>Information Privacy & Security</h4>
+        <span>HIPAA · IPS</span>
+      </div>
+
+      <div class="badge">
+        <div class="badge-icon">⚖</div>
+        <h4>Conflicts of Interest</h4>
+        <span>CITI COI</span>
+      </div>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta">
     <h2>Open to Opportunities</h2>
-    <p>
-      I am actively seeking Clinical Research Coordinator (CRC),
-      research assistant, and research-focused healthcare roles.
-    </p>
     <p>
       📧 <a href="mailto:prasanna.drona.a@gmail.com">prasanna.drona.a@gmail.com</a><br>
       💼 <a href="https://www.linkedin.com/in/prasanna1994/" target="_blank">linkedin.com/in/prasanna1994</a><br>
