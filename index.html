@@ -6,12 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    /* ===== SITE-WIDE CRC WATERMARK BACKGROUND ===== */
     body {
       font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      background: #f8fafc;
       color: #0f172a;
       line-height: 1.6;
+
+      background:
+        linear-gradient(180deg, #f8fafc, #f1f5f9),
+        repeating-linear-gradient(
+          0deg,
+          rgba(15,23,42,0.025),
+          rgba(15,23,42,0.025) 1px,
+          transparent 1px,
+          transparent 28px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(15,23,42,0.025),
+          rgba(15,23,42,0.025) 1px,
+          transparent 1px,
+          transparent 28px
+        );
     }
 
     .container {
@@ -20,33 +37,45 @@
       padding: 40px 20px;
     }
 
-    /* HERO */
+    /* ===== HERO: CLINICAL + RESEARCH + INFORMATICS ===== */
     .hero {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.06) 0%, transparent 40%);
-  color: white;
-  padding: 70px 40px;
-  border-radius: 16px;
-  margin-bottom: 60px;
-}
-
+      background:
+        linear-gradient(135deg, #0b1220, #162e6f),
+        linear-gradient(
+          0deg,
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.04) 1px,
+          transparent 1px
+        );
+      background-size: 100% 100%, 24px 24px, 24px 24px;
+      color: white;
+      padding: 70px 40px;
+      border-radius: 16px;
+      margin-bottom: 60px;
+      box-shadow: 0 20px 60px rgba(22,46,111,0.35);
+    }
 
     .hero h1 {
       font-size: 44px;
       margin-bottom: 10px;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.4);
     }
 
     .hero p.subtitle {
       font-size: 22px;
       color: #c7d2fe;
       margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     .hero p.summary {
       font-size: 18px;
       max-width: 780px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     section {
@@ -57,7 +86,17 @@
       font-size: 28px;
       border-left: 6px solid #2563eb;
       padding-left: 14px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #1e3a8a);
+      margin-top: 8px;
+      border-radius: 2px;
     }
 
     ul {
@@ -76,7 +115,7 @@
       margin-bottom: 25px;
     }
 
-    /* VISUAL TIMELINE */
+    /* ===== VISUAL TIMELINE ===== */
     .visual-timeline {
       display: grid;
       gap: 30px;
@@ -105,22 +144,7 @@
       border-radius: 50%;
     }
 
-    .timeline-text h3 {
-      margin: 0;
-      font-size: 18px;
-    }
-
-    .timeline-text span {
-      font-size: 14px;
-      color: #475569;
-    }
-
-    .timeline-text p {
-      margin-top: 6px;
-      font-size: 15px;
-    }
-
-    /* CERTIFICATION BADGES */
+    /* ===== CERTIFICATION BADGES ===== */
     .badge-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -159,7 +183,7 @@
       color: #475569;
     }
 
-    /* CTA */
+    /* ===== CTA ===== */
     .cta {
       background: #e0e7ff;
       padding: 40px;
@@ -214,13 +238,13 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE (DETAIL) -->
+  <!-- EXPERIENCE -->
   <section>
     <h2>Clinical & Research Experience</h2>
 
     <div class="card">
       <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
-      <span>Hyderabad, India · Jun 2022 – Jun 2024</span>
+      <p><em>Hyderabad, India · Jun 2022 – Jun 2024</em></p>
       <ul>
         <li>Supported clinical research and quality-improvement initiatives through chart abstraction and source document review</li>
         <li>Conducted patient screening, eligibility verification, and informed consent discussions</li>
@@ -231,7 +255,7 @@
 
     <div class="card">
       <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
-      <span>Hyderabad, India · Feb 2021 – Mar 2022</span>
+      <p><em>Hyderabad, India · Feb 2021 – Mar 2022</em></p>
       <ul>
         <li>Supported hospital-based research through chart reviews and documentation quality checks</li>
         <li>Assisted with patient recruitment and eligibility verification</li>
@@ -240,87 +264,43 @@
     </div>
 
     <div class="card">
-      <h3>Clinical Intern – Bicol Medical Center</h3>
-      <span>Philippines · Dec 2019 – May 2020</span>
+      <h3>Clinical Intern – Teaching Hospitals</h3>
+      <p><em>Philippines · 2019 – 2020</em></p>
       <ul>
-        <li>Conducted patient assessments and clinical documentation</li>
-        <li>Supported academic research through chart abstraction</li>
-        <li>Performed phlebotomy and specimen collection</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital</h3>
-      <span>Philippines · Jun 2019 – Dec 2019</span>
-      <ul>
-        <li>Participated in bedside data collection and chart reviews</li>
-        <li>Supported community health documentation and patient education</li>
+        <li>Patient care, clinical documentation, phlebotomy, and academic research support</li>
       </ul>
     </div>
   </section>
 
-  <!-- VISUAL TIMELINE -->
+  <!-- TIMELINE -->
   <section>
     <h2>Professional Experience Timeline</h2>
-
     <div class="visual-timeline">
 
       <div class="timeline-card">
         <div class="timeline-icon">🏥</div>
-        <div class="timeline-text">
+        <div>
           <h3>Chief Medical Officer</h3>
           <span>Pioneer Multi-Specialty Hospital · 2022–2024</span>
-          <p>Clinical research support, informed consent, EHR documentation, and compliance.</p>
         </div>
       </div>
 
       <div class="timeline-card">
         <div class="timeline-icon">🧪</div>
-        <div class="timeline-text">
+        <div>
           <h3>Chief Medical Officer</h3>
           <span>Medisys Multi-Specialty Hospital · 2021–2022</span>
-          <p>Hospital-based research support, patient recruitment, chart reviews.</p>
         </div>
       </div>
 
       <div class="timeline-card">
         <div class="timeline-icon">👨‍⚕️</div>
-        <div class="timeline-text">
+        <div>
           <h3>Clinical Intern</h3>
-          <span>Teaching Hospitals · Philippines · 2019–2020</span>
-          <p>Patient care, clinical documentation, and academic research support.</p>
+          <span>Teaching Hospitals · Philippines</span>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section>
-    <h2>Selected Academic & Research Projects</h2>
-    <div class="card">
-      <h3>Clinical Decision Support Systems (CDSS) & Medication Safety</h3>
-      <ul>
-        <li>Reviewed 24 peer-reviewed studies using PRISMA methodology</li>
-        <li>Identified 30–50% reductions in medication errors</li>
-        <li>Analyzed alert fatigue, workflow integration, and clinician trust</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Core Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Clinical Research Coordination (CRC)</li>
-        <li>Informed Consent & Source Documentation</li>
-        <li>Patient Recruitment & Visit Coordination</li>
-        <li>EHR / EMR Review</li>
-        <li>Phlebotomy & Specimen Handling</li>
-        <li>REDCap & EDC Familiarity</li>
-        <li>SQL, R, Python (academic use)</li>
-      </ul>
     </div>
   </section>
 
