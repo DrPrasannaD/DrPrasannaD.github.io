@@ -42,10 +42,9 @@
 
     .hero p.summary {
       font-size: 18px;
-      max-width: 750px;
+      max-width: 780px;
     }
 
-    /* SECTIONS */
     section {
       margin-bottom: 60px;
     }
@@ -54,12 +53,11 @@
       font-size: 28px;
       border-left: 6px solid #2563eb;
       padding-left: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     ul {
@@ -70,7 +68,6 @@
       margin-bottom: 8px;
     }
 
-    /* CARDS */
     .card {
       background: white;
       padding: 25px;
@@ -79,7 +76,51 @@
       margin-bottom: 25px;
     }
 
-    /* CTA */
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: #2563eb;
+      border-radius: 4px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: #2563eb;
+      border-radius: 50%;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content span {
+      font-size: 14px;
+      color: #475569;
+    }
+
     .cta {
       background: #e0e7ff;
       padding: 40px;
@@ -106,22 +147,18 @@
 </head>
 
 <body>
-
 <div class="container">
 
   <!-- HERO -->
   <div class="hero">
     <h1>Dr. Prasanna Kumar Reddy</h1>
-    <p class="subtitle">
-      Emergency Physician · Clinical Research · Health Informatics
-    </p>
+    <p class="subtitle">Emergency Physician · Clinical Research · Health Informatics</p>
     <p class="summary">
-      Clinically trained physician with hands-on experience supporting
-      clinical research operations, patient safety initiatives, and
-      healthcare data analytics. Experienced in patient screening,
-      informed consent, source documentation, EHR review, and compliance
-      with ICH-GCP, HIPAA, and IRB workflows. Actively seeking
-      Clinical Research Coordinator (CRC) and research-focused healthcare roles.
+      Clinically trained physician with hands-on experience supporting clinical research
+      operations, patient safety initiatives, and healthcare data analytics.
+      Experienced in patient screening, informed consent, source documentation,
+      EHR review, and compliance with ICH-GCP, HIPAA, and IRB workflows.
+      Actively seeking Clinical Research Coordinator (CRC) and research-focused healthcare roles.
     </p>
   </div>
 
@@ -130,82 +167,108 @@
     <h2>Why I Add Value to Clinical Research Teams</h2>
     <div class="card">
       <ul>
-        <li>Physician-level clinical judgment combined with CRC-level execution</li>
-        <li>Hands-on experience with patient screening, eligibility verification, and informed consent</li>
+        <li>Physician-level clinical judgment with CRC-level execution</li>
+        <li>Hands-on experience with patient screening, informed consent, and visit coordination</li>
         <li>Strong grounding in ICH-GCP, FDA CFR Title 21, HIPAA, and research ethics</li>
-        <li>Comfortable working across clinical, regulatory, and data teams</li>
-        <li>Detail-oriented focus on participant safety and data integrity</li>
+        <li>Ability to bridge clinicians, coordinators, and data teams</li>
+        <li>Strong focus on participant safety and data integrity</li>
       </ul>
     </div>
   </section>
 
- <section>
-  <h2>Clinical & Research Experience</h2>
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Clinical & Research Experience</h2>
 
-  <div class="card">
-    <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital, Hyderabad, India</h3>
-    <p><em>Jun 2022 – Jun 2024</em></p>
-    <ul>
-      <li>Supported clinical research and quality-improvement initiatives through chart abstraction, source document review, and clinical data verification</li>
-      <li>Conducted patient screening, eligibility verification, and informed consent discussions in accordance with ethical and regulatory standards</li>
-      <li>Performed protocol-driven clinical assessments and ensured accurate, audit-ready EHR documentation</li>
-      <li>Executed phlebotomy and specimen collection with proper labeling, biosafety, and documentation compliance</li>
-      <li>Collaborated with investigators and clinical teams to maintain ICH-GCP, HIPAA, and protocol adherence</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
+      <span>Hyderabad, India · Jun 2022 – Jun 2024</span>
+      <ul>
+        <li>Supported clinical research and quality-improvement initiatives through chart abstraction and source document review</li>
+        <li>Conducted patient screening, eligibility verification, and informed consent discussions</li>
+        <li>Performed protocol-driven assessments and ensured audit-ready EHR documentation</li>
+        <li>Executed phlebotomy and specimen collection following GCP standards</li>
+        <li>Collaborated with investigators to maintain ICH-GCP and HIPAA compliance</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital, Hyderabad, India</h3>
-    <p><em>Feb 2021 – Mar 2022</em></p>
-    <ul>
-      <li>Supported hospital-based research through clinical data collection, chart reviews, and documentation quality checks</li>
-      <li>Assisted with patient recruitment support and eligibility verification for observational studies</li>
-      <li>Maintained source documents and EHR records to ensure data integrity and audit readiness</li>
-      <li>Performed phlebotomy, specimen handling, and diagnostic sample preparation aligned with GCP standards</li>
-      <li>Coordinated with physicians and administrative teams to ensure regulatory compliance and protocol consistency</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
+      <span>Hyderabad, India · Feb 2021 – Mar 2022</span>
+      <ul>
+        <li>Supported hospital-based research through chart reviews and documentation quality checks</li>
+        <li>Assisted with patient recruitment and eligibility verification for observational studies</li>
+        <li>Maintained source documents and EHR records to ensure audit readiness</li>
+        <li>Performed phlebotomy and specimen handling aligned with GCP standards</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>Clinical Intern – Bicol Medical Center, Philippines</h3>
-    <p><em>Dec 2019 – May 2020</em></p>
-    <ul>
-      <li>Conducted patient assessments, clinical documentation, and daily progress notes under physician supervision</li>
-      <li>Supported academic and observational research activities through chart abstraction and outcome documentation</li>
-      <li>Performed phlebotomy and specimen collection with proper handling and labeling</li>
-      <li>Assisted with inpatient and outpatient clinical workflows and patient coordination</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Clinical Intern – Bicol Medical Center</h3>
+      <span>Philippines · Dec 2019 – May 2020</span>
+      <ul>
+        <li>Conducted patient assessments and clinical documentation under physician supervision</li>
+        <li>Supported academic research through chart abstraction and outcome documentation</li>
+        <li>Performed phlebotomy and specimen collection</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital, Philippines</h3>
-    <p><em>Jun 2019 – Dec 2019</em></p>
-    <ul>
-      <li>Participated in chart reviews, bedside data collection, and case documentation for academic research</li>
-      <li>Assisted with community health data collection and ensured documentation completeness</li>
-      <li>Supported patient education, follow-up documentation, and compliance with institutional clinical protocols</li>
-      <li>Worked closely with multidisciplinary clinical teams in a teaching hospital environment</li>
-    </ul>
-  </div>
+    <div class="card">
+      <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital</h3>
+      <span>Philippines · Jun 2019 – Dec 2019</span>
+      <ul>
+        <li>Participated in bedside data collection and chart reviews for academic research</li>
+        <li>Supported community health documentation and patient education</li>
+        <li>Worked within multidisciplinary teaching hospital teams</li>
+      </ul>
+    </div>
+  </section>
 
-</section>
+  <!-- TIMELINE -->
+  <section>
+    <h2>Professional Experience Timeline</h2>
 
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
+          <span>India · 2022 – 2024</span>
+          <p>Clinical research support, informed consent, EHR documentation, and protocol adherence.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
+          <span>India · 2021 – 2022</span>
+          <p>Hospital-based research support, patient recruitment, and specimen handling.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Clinical Intern – Teaching Hospitals</h3>
+          <span>Philippines · 2019 – 2020</span>
+          <p>Clinical care, academic research assistance, and documentation.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- PROJECTS -->
   <section>
     <h2>Selected Academic & Research Projects</h2>
-
     <div class="card">
       <h3>Clinical Decision Support Systems (CDSS) & Medication Safety</h3>
-      <p>
-        Graduate-level integrative literature review evaluating 24 peer-reviewed
-        studies on the effectiveness of Clinical Decision Support Systems
-        in reducing medication errors in hospital settings.
-      </p>
       <ul>
-        <li>Identified 30–50% reductions in prescribing and administration errors</li>
+        <li>Reviewed 24 peer-reviewed studies using PRISMA methodology</li>
+        <li>Identified 30–50% reductions in medication errors with CDSS use</li>
         <li>Analyzed alert fatigue, workflow integration, and clinician trust</li>
-        <li>Applied PRISMA methodology and informatics frameworks (TAM, DIKW)</li>
         <li>Evaluated ethical, regulatory, and data governance considerations</li>
       </ul>
     </div>
@@ -219,10 +282,10 @@
         <li>Clinical Research Coordination (CRC)</li>
         <li>Informed Consent & Source Documentation</li>
         <li>Patient Recruitment & Visit Coordination</li>
-        <li>EHR / EMR Review & Clinical Documentation</li>
+        <li>EHR / EMR Review</li>
         <li>Phlebotomy & Specimen Handling</li>
         <li>REDCap & EDC Familiarity</li>
-        <li>SQL, R, Python (academic & applied coursework)</li>
+        <li>SQL, R, Python (academic use)</li>
       </ul>
     </div>
   </section>
@@ -236,35 +299,4 @@
         <li>CITI – Responsible Conduct of Research (RCR)</li>
         <li>CITI – Information Privacy & Security (IPS)</li>
         <li>CITI – Conflicts of Interest (COI)</li>
-        <li>BLS – Healthcare Provider</li>
-      </ul>
-      <p><em>All certifications are verifiable via the CITI Program.</em></p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-  <h2>Open to Opportunities</h2>
-  <p>
-    I am actively seeking Clinical Research Coordinator (CRC),
-    research assistant, and research-focused healthcare roles
-    where clinical insight, regulatory compliance, and data-driven
-    thinking are valued.
-  </p>
-  <p>
-    📧 Email: <a href="mailto:prasanna.drona.a@gmail.com">prasanna.drona.a@gmail.com</a><br>
-    💼 LinkedIn: <a href="https://www.linkedin.com/in/prasanna1994/" target="_blank">linkedin.com/in/prasanna1994</a><br>
-    💻 GitHub: <a href="https://github.com/DrPrasannaD" target="_blank">github.com/DrPrasannaD</a><br>
-    🌐 Portfolio: <a href="https://DrPrasannaD.github.io" target="_blank">DrPrasannaD.github.io</a>
-  </p>
-</section>
-
-
-  <footer>
-    © 2026 · Dr. Prasanna Kumar Reddy
-  </footer>
-
-</div>
-
-</body>
-</html>
+        <li>BLS – Heal
