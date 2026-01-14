@@ -12,7 +12,6 @@
       margin: 0;
       color: #0f172a;
       line-height: 1.6;
-
       background:
         linear-gradient(180deg, #f8fafc, #f1f5f9),
         repeating-linear-gradient(
@@ -37,20 +36,12 @@
       padding: 40px 20px;
     }
 
-    /* ===== HERO: CLINICAL + RESEARCH + INFORMATICS ===== */
+    /* ===== HERO ===== */
     .hero {
       background:
         linear-gradient(135deg, #0b1220, #162e6f),
-        linear-gradient(
-          0deg,
-          rgba(255,255,255,0.04) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.04) 1px,
-          transparent 1px
-        );
+        linear-gradient(0deg, rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
       background-size: 100% 100%, 24px 24px, 24px 24px;
       color: white;
       padding: 70px 40px;
@@ -69,18 +60,14 @@
       font-size: 22px;
       color: #c7d2fe;
       margin-bottom: 20px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
     .hero p.summary {
       font-size: 18px;
       max-width: 780px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
     }
 
-    section {
-      margin-bottom: 60px;
-    }
+    section { margin-bottom: 60px; }
 
     h2 {
       font-size: 28px;
@@ -89,23 +76,8 @@
       margin-bottom: 20px;
     }
 
-    h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #2563eb, #1e3a8a);
-      margin-top: 8px;
-      border-radius: 2px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
 
     .card {
       background: white;
@@ -115,7 +87,7 @@
       margin-bottom: 25px;
     }
 
-    /* ===== VISUAL TIMELINE ===== */
+    /* ===== TIMELINE ===== */
     .visual-timeline {
       display: grid;
       gap: 30px;
@@ -142,6 +114,56 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+    }
+
+    /* ===== VIEW PRESENTATION BUTTON ===== */
+    .view-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #2563eb, #1e3a8a);
+      color: white;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    /* ===== MODAL VIEWER ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+    }
+
+    .modal-content {
+      position: relative;
+      width: 85%;
+      height: 85%;
+      margin: 5% auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #1e3a8a;
     }
 
     /* ===== CERTIFICATION BADGES ===== */
@@ -173,31 +195,11 @@
       justify-content: center;
     }
 
-    .badge h4 {
-      margin: 0;
-      font-size: 15px;
-    }
-
-    .badge span {
-      font-size: 13px;
-      color: #475569;
-    }
-
     /* ===== CTA ===== */
     .cta {
       background: #e0e7ff;
       padding: 40px;
       border-radius: 16px;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -217,191 +219,124 @@
     <h1>Dr. Prasanna Kumar Reddy</h1>
     <p class="subtitle">Emergency Physician · Clinical Research · Health Informatics</p>
     <p class="summary">
-      Clinically trained physician with hands-on experience supporting clinical research,
-      patient safety initiatives, and healthcare data analytics. Experienced in patient
-      screening, informed consent, source documentation, EHR review, and ICH-GCP compliance.
-      Actively seeking Clinical Research Coordinator (CRC) and research-focused roles.
+      Clinically trained physician with hands-on experience in patient screening,
+      informed consent, source documentation, EHR review, and ICH-GCP–aligned workflows.
+      Actively seeking Clinical Research Coordinator (CRC) roles.
     </p>
   </div>
 
-  <!-- WHY ME -->
+  <!-- EXPERIENCE -->
   <section>
-    <h2>Why I Add Value to Clinical Research Teams</h2>
+    <h2>Clinical & Research Experience</h2>
+
     <div class="card">
+      <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
+      <p><em>Hyderabad, India · Jun 2022 – Jun 2024</em></p>
       <ul>
-        <li>Physician-level clinical judgment with CRC-level execution</li>
-        <li>Hands-on experience with patient screening, informed consent, and visit coordination</li>
-        <li>Strong grounding in ICH-GCP, HIPAA, and research ethics</li>
-        <li>Ability to bridge clinicians, coordinators, and data teams</li>
-        <li>Strong focus on participant safety and data integrity</li>
+        <li>Patient screening, eligibility verification, and informed consent support</li>
+        <li>Source document review, chart abstraction, and audit-ready EHR documentation</li>
+        <li>Phlebotomy and specimen handling aligned with GCP standards</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
+      <p><em>Hyderabad, India · Feb 2021 – Mar 2022</em></p>
+      <ul>
+        <li>Hospital-based research support and observational data collection</li>
+        <li>Patient recruitment assistance and documentation quality checks</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Clinical Intern – Bicol Medical Center</h3>
+      <p><em>Philippines · Dec 2019 – May 2020</em></p>
+      <ul>
+        <li>Patient care, clinical documentation, and academic research support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital</h3>
+      <p><em>Philippines · Jun 2019 – Dec 2019</em></p>
+      <ul>
+        <li>Bedside data collection and chart reviews</li>
       </ul>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section>
-  <h2>Clinical & Research Experience</h2>
-
-  <div class="card">
-    <h3>Chief Medical Officer – Pioneer Multi-Specialty Hospital</h3>
-    <p><em>Hyderabad, India · Jun 2022 – Jun 2024</em></p>
-    <ul>
-      <li>Supported clinical research and quality-improvement initiatives through chart abstraction, source document review, and data verification</li>
-      <li>Conducted patient screening, eligibility verification, and informed consent discussions in clinical settings</li>
-      <li>Performed protocol-driven clinical assessments and ensured audit-ready EHR documentation</li>
-      <li>Executed phlebotomy and specimen collection following biosafety and GCP-aligned standards</li>
-      <li>Collaborated with physicians, nurses, and administrators to maintain ICH-GCP, HIPAA, and institutional compliance</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Chief Medical Officer – Medisys Multi-Specialty Hospital</h3>
-    <p><em>Hyderabad, India · Feb 2021 – Mar 2022</em></p>
-    <ul>
-      <li>Supported hospital-based clinical research and observational studies through chart reviews and clinical data collection</li>
-      <li>Assisted with patient recruitment support, eligibility checks, and follow-up documentation</li>
-      <li>Maintained accurate source documents and EHR records to ensure data integrity and audit readiness</li>
-      <li>Performed phlebotomy, specimen handling, and diagnostic sample preparation in compliance with GCP standards</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Clinical Intern – Bicol Medical Center</h3>
-    <p><em>Philippines · Dec 2019 – May 2020</em></p>
-    <ul>
-      <li>Conducted patient assessments, daily clinical documentation, and progress notes under physician supervision</li>
-      <li>Supported academic and observational research through chart abstraction and outcome documentation</li>
-      <li>Performed phlebotomy and specimen collection with proper labeling and handling</li>
-      <li>Assisted with inpatient and outpatient clinical workflows</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Clinical Intern – Bicol Regional Training & Teaching Hospital</h3>
-    <p><em>Philippines · Jun 2019 – Dec 2019</em></p>
-    <ul>
-      <li>Participated in bedside data collection, chart reviews, and case documentation for academic research</li>
-      <li>Supported community health data collection and documentation completeness</li>
-      <li>Worked within multidisciplinary teams in a teaching hospital environment</li>
-    </ul>
-  </div>
-
-</section>
-
-
   <!-- TIMELINE -->
   <section>
-  <h2>Professional Experience Timeline</h2>
-
-  <div class="visual-timeline">
-
-    <div class="timeline-card">
-      <div class="timeline-icon">🏥</div>
-      <div>
-        <h3>Chief Medical Officer</h3>
-        <span>Pioneer Multi-Specialty Hospital · India · 2022–2024</span>
-        <p>Clinical research support, informed consent, protocol-driven assessments, EHR documentation, and regulatory compliance.</p>
+    <h2>Professional Experience Timeline</h2>
+    <div class="visual-timeline">
+      <div class="timeline-card">
+        <div class="timeline-icon">🏥</div>
+        <div>
+          <h3>Chief Medical Officer</h3>
+          <span>Pioneer Multi-Specialty Hospital · 2022–2024</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-icon">🧪</div>
+        <div>
+          <h3>Chief Medical Officer</h3>
+          <span>Medisys Multi-Specialty Hospital · 2021–2022</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-icon">👨‍⚕️</div>
+        <div>
+          <h3>Clinical Intern</h3>
+          <span>Bicol Medical Center · 2019–2020</span>
+        </div>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-icon">🎓</div>
+        <div>
+          <h3>Clinical Intern</h3>
+          <span>Bicol Regional Training & Teaching Hospital · 2019</span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="timeline-card">
-      <div class="timeline-icon">🧪</div>
-      <div>
-        <h3>Chief Medical Officer</h3>
-        <span>Medisys Multi-Specialty Hospital · India · 2021–2022</span>
-        <p>Hospital-based research support, patient recruitment assistance, chart reviews, and specimen handling.</p>
+  <!-- PROJECTS -->
+  <section>
+    <h2>Academic & Clinical Research Projects</h2>
+
+    <div class="card">
+      <h3>Clinical Decision Support Systems (CDSS) & Medication Error Reduction</h3>
+      <ul>
+        <li>Reviewed 24 peer-reviewed studies using PRISMA methodology</li>
+        <li>Identified 30–50% reductions in medication errors</li>
+        <li>Analyzed alert fatigue and workflow integration</li>
+      </ul>
+
+      <div class="view-btn" onclick="openPresentationModal()">
+        View Research Presentation
       </div>
+
+      <p style="font-size:13px;color:#475569;">View-only presentation</p>
     </div>
 
-    <div class="timeline-card">
-      <div class="timeline-icon">👨‍⚕️</div>
-      <div>
-        <h3>Clinical Intern</h3>
-        <span>Bicol Medical Center · Philippines · 2019–2020</span>
-        <p>Patient care, clinical documentation, phlebotomy, and academic research support.</p>
-      </div>
+    <div class="card">
+      <h3>Clinical Data Analytics – Hepatitis Patient Outcomes</h3>
+      <ul>
+        <li>Descriptive and exploratory analysis using SQL, R, and Python</li>
+        <li>Outcome and demographic association analysis</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="timeline-card">
-      <div class="timeline-icon">🎓</div>
-      <div>
-        <h3>Clinical Intern</h3>
-        <span>Bicol Regional Training & Teaching Hospital · Philippines · 2019</span>
-        <p>Bedside data collection, chart reviews, community health documentation, and teaching-hospital workflows.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <h2>Academic & Clinical Research Projects</h2>
-
-  <div class="card">
-    <h3>Clinical Decision Support Systems (CDSS) & Medication Error Reduction</h3>
-    <p><em>Graduate Literature Review Project · Health Informatics</em></p>
-    <ul>
-      <li>Conducted an integrative review of 24 peer-reviewed studies evaluating the effectiveness of Clinical Decision Support Systems (CDSS) in reducing medication errors in hospital settings</li>
-      <li>Applied PRISMA-based methodology to synthesize evidence on prescribing accuracy, administration safety, and clinical workflow integration</li>
-      <li>Identified 30–50% reductions in prescribing and administration errors with well-implemented CDSS</li>
-      <li>Analyzed key challenges including alert fatigue, interoperability, clinician trust, and system usability</li>
-      <li>Evaluated regulatory, ethical, and data governance considerations including HIPAA compliance and clinician accountability</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Clinical Data Analytics – Hepatitis Patient Outcomes</h3>
-    <p><em>Applied Analytics Project · Biomedical Data Science</em></p>
-    <ul>
-      <li>Performed descriptive and exploratory analysis of hepatitis patient datasets to evaluate clinical outcomes and trends</li>
-      <li>Applied SQL for data extraction and joins, and R/Python for data cleaning, analysis, and visualization</li>
-      <li>Examined associations between demographic variables, laboratory values, and clinical outcomes</li>
-      <li>Developed insights to support outcome monitoring and data-driven clinical decision-making</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Hospital Quality Improvement & Clinical Data Review</h3>
-    <p><em>Clinical Practice–Based Projects · Multi-Specialty Hospitals</em></p>
-    <ul>
-      <li>Supported quality-improvement initiatives through systematic chart abstraction and clinical data verification</li>
-      <li>Reviewed EHR documentation for completeness, accuracy, and protocol alignment</li>
-      <li>Assisted with identification of workflow gaps affecting documentation quality and patient safety</li>
-      <li>Collaborated with clinical teams to reinforce standardized documentation and compliance practices</li>
-    </ul>
-  </div>
-
-</section>
-
-  
   <!-- CERTIFICATIONS -->
   <section>
     <h2>Certifications & Compliance Training</h2>
 
     <div class="badge-grid">
-      <div class="badge">
-        <div class="badge-icon">✔</div>
-        <h4>Good Clinical Practice</h4>
-        <span>ICH E6 · FDA Focus</span>
-      </div>
-
-      <div class="badge">
-        <div class="badge-icon">🧬</div>
-        <h4>Responsible Conduct of Research</h4>
-        <span>CITI RCR</span>
-      </div>
-
-      <div class="badge">
-        <div class="badge-icon">🔐</div>
-        <h4>Information Privacy & Security</h4>
-        <span>HIPAA · IPS</span>
-      </div>
-
-      <div class="badge">
-        <div class="badge-icon">⚖</div>
-        <h4>Conflicts of Interest</h4>
-        <span>CITI COI</span>
-      </div>
+      <div class="badge"><div class="badge-icon">✔</div>Good Clinical Practice</div>
+      <div class="badge"><div class="badge-icon">🧬</div>Responsible Conduct of Research</div>
+      <div class="badge"><div class="badge-icon">🔐</div>Information Privacy & Security</div>
+      <div class="badge"><div class="badge-icon">⚖</div>Conflicts of Interest</div>
     </div>
   </section>
 
@@ -410,9 +345,8 @@
     <h2>Open to Opportunities</h2>
     <p>
       📧 <a href="mailto:prasanna.drona.a@gmail.com">prasanna.drona.a@gmail.com</a><br>
-      💼 <a href="https://www.linkedin.com/in/prasanna1994/" target="_blank">linkedin.com/in/prasanna1994</a><br>
-      💻 <a href="https://github.com/DrPrasannaD" target="_blank">github.com/DrPrasannaD</a><br>
-      🌐 <a href="https://DrPrasannaD.github.io" target="_blank">DrPrasannaD.github.io</a>
+      💼 <a href="https://www.linkedin.com/in/prasanna1994/">linkedin.com/in/prasanna1994</a><br>
+      💻 <a href="https://github.com/DrPrasannaD">github.com/DrPrasannaD</a>
     </p>
   </section>
 
@@ -421,5 +355,23 @@
   </footer>
 
 </div>
+
+<!-- MODAL -->
+<div id="presentationModal" class="modal" onclick="closePresentationModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <span class="close-modal" onclick="closePresentationModal()">×</span>
+    <iframe src="assets/presentations/Dronadula_Research_Presentation.pdf#toolbar=0&navpanes=0&scrollbar=0"></iframe>
+  </div>
+</div>
+
+<script>
+  function openPresentationModal() {
+    document.getElementById("presentationModal").style.display = "block";
+  }
+  function closePresentationModal() {
+    document.getElementById("presentationModal").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
