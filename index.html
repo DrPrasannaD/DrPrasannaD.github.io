@@ -86,6 +86,44 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       margin-bottom: 25px;
     }
+    /* ===== SKILLS SECTION ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.skill-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.skill-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background: #eef2ff;
+  color: #1e3a8a;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
 
     /* ===== TIMELINE ===== */
     .visual-timeline {
@@ -364,6 +402,76 @@ EDC systems. Strong focus on regulatory compliance, participant safety, and data
       </div>
     </div>
   </section>
+
+ <!-- SKILLS -->
+<section>
+  <h2>Core Skills</h2>
+
+  <div class="skills-grid">
+
+    <!-- CRC SKILLS -->
+    <div class="skill-card">
+      <h3>🧪 Clinical Research Coordination</h3>
+      <div class="skill-badges">
+        <span class="skill-badge">Patient Screening</span>
+        <span class="skill-badge">Informed Consent</span>
+        <span class="skill-badge">Visit Coordination</span>
+        <span class="skill-badge">Source Documentation</span>
+        <span class="skill-badge">Chart Abstraction</span>
+        <span class="skill-badge">Protocol Adherence</span>
+      </div>
+    </div>
+
+    <!-- REGULATORY -->
+    <div class="skill-card">
+      <h3>📋 Regulatory & Compliance</h3>
+      <div class="skill-badges">
+        <span class="skill-badge">ICH-GCP</span>
+        <span class="skill-badge">HIPAA</span>
+        <span class="skill-badge">IRB Awareness</span>
+        <span class="skill-badge">Research Ethics</span>
+        <span class="skill-badge">Audit-Ready Documentation</span>
+      </div>
+    </div>
+
+    <!-- CLINICAL -->
+    <div class="skill-card">
+      <h3>🏥 Clinical Skills</h3>
+      <div class="skill-badges">
+        <span class="skill-badge">Patient Assessment</span>
+        <span class="skill-badge">Vitals</span>
+        <span class="skill-badge">Phlebotomy</span>
+        <span class="skill-badge">Specimen Handling</span>
+        <span class="skill-badge">Clinical Documentation</span>
+      </div>
+    </div>
+
+    <!-- INFORMATICS -->
+    <div class="skill-card">
+      <h3>💻 Informatics & Analytics</h3>
+      <div class="skill-badges">
+        <span class="skill-badge">SQL</span>
+        <span class="skill-badge">R</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">REDCap (Familiarity)</span>
+        <span class="skill-badge">EHR / EMR Review</span>
+        <span class="skill-badge">Clinical Data Analytics</span>
+      </div>
+    </div>
+
+    <!-- COMMUNICATION -->
+    <div class="skill-card">
+      <h3>🧠 Communication & Teamwork</h3>
+      <div class="skill-badges">
+        <span class="skill-badge">Patient Communication</span>
+        <span class="skill-badge">Multidisciplinary Collaboration</span>
+        <span class="skill-badge">Clinical–Data Translation</span>
+        <span class="skill-badge">Documentation Accuracy</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- PROJECTS -->
   <section>
